@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
         dir: {
           output: "docs"
         },
-        pathPrefix: "/velum/"
+        pathPrefix: "/velum2/"
       }
 };
 
