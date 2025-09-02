@@ -1,0 +1,95 @@
+button, .button, .button:visited {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-foundation-primary);
+    font-family: "Figtree", sans-serif;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--font-size-lg-tall);
+    text-align: center;
+    text-decoration: none;
+    padding: var(--spacing-12) var(--spacing-32);
+    border: 1px solid var(--color-foundation-primary);
+    border-radius: var(--spacing-4);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover, .button:hover,
+button:focus, .button:focus {
+    background: var(--color-blue-100); 
+    color: var(--color-foundation-primary);
+    transform: scale(0.9);
+}
+
+button:active, .button:active {
+    background: var(--color-foundation-primary);
+    color: var(--color-white);
+    transform: scale(1);
+}
+
+button.primary, .button.primary, .button.primary:visited {
+    background: var(--color-foundation-primary);
+    color: var(--color-white);
+}
+
+button.primary:hover, .button.primary:hover,
+button.primary:focus, .button.primary:focus {
+    background: #1c63f2; 
+    border-color: #1c63f2;
+}
+
+button.primary:active, .button.primary:active {
+    background: var(--color-blue-900);
+    border-color: var(--color-blue-900);
+}
+
+button.button-flat, .button.button-flat, .button.button-flat:visited {
+    background: transparent;
+    color: var(--color-foundation-primary);
+    text-decoration: underline;
+    border: none;
+    padding: var(--spacing-12) var(--spacing-0);
+}
+
+button.button-flat:hover, .button.button-flat:hover, .button.button-flat:hover {
+    text-decoration: none;
+    color: #1c63f2;
+}
+
+button.button-flat:active, .button.button-flat:active {
+    color: var(--color-blue-900);
+}
+
+button.tertiary, .button.tertiary, .button.tertiary:visited {
+    background: transparent;
+    color: var(--color-text-default);
+    text-decoration: underline;
+    border: none;
+    padding: var(--spacing-12) var(--spacing-0);
+}
+
+button.tertiary:hover, .button.tertiary:hover, .button.tertiary:hover {
+    text-decoration: none;
+    color: var(--color-blue-900);
+}
+
+button.tertiary:active, .button.tertiary:active {color: #1c63f2;}
+
+.button.button-sm, a.button.button-sm {
+    font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+.button.button-xs, a.button.button-xs {
+    font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+    padding: var(--spacing-2) var(--spacing-14);
+}
+
+.fullwidth {
+    width: 100%;
+    box-sizing: border-box;
+}
+

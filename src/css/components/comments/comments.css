@@ -1,0 +1,483 @@
+/* Velum Comments Widget Styles */
+
+.velum-comments {
+  background: var(--color-white);
+  border-radius: var(--spacing-8);
+  padding: var(--spacing-24);
+  margin: var(--spacing-24) 0;
+  border: 1px solid var(--color-gray-200);
+}
+
+.velum-comments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-24);
+  padding-bottom: var(--spacing-16);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.velum-comments-header h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-default);
+}
+
+.velum-comments-auth button {
+  background: var(--color-foundation-primary);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.velum-comments-auth button:hover {
+  background: var(--color-blue-700);
+}
+
+.velum-comments-list {
+  margin-bottom: var(--spacing-24);
+}
+
+.velum-comments-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-16);
+  padding-bottom: var(--spacing-8);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.velum-comment {
+  margin-bottom: var(--spacing-24);
+  padding: var(--spacing-16);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--spacing-8);
+  background: var(--color-white);
+}
+
+.velum-comment:last-child {
+  margin-bottom: 0;
+}
+
+.velum-comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.velum-comment-avatar {
+  width: var(--spacing-32);
+  height: var(--spacing-32);
+  border-radius: 50%;
+  margin-right: var(--spacing-12);
+  border: 1px solid var(--color-gray-200);
+}
+
+.velum-comment-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.velum-comment-author {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-default);
+  margin-bottom: var(--spacing-2);
+}
+
+.velum-comment-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+}
+
+.velum-comment-body {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  color: var(--color-text-default);
+}
+
+.velum-comment-body p {
+  margin-bottom: var(--spacing-12);
+}
+
+.velum-comment-body p:last-child {
+  margin-bottom: 0;
+}
+
+.velum-comment-body code {
+  background: var(--color-gray-100);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-default);
+}
+
+.velum-comment-body strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.velum-comment-body em {
+  font-style: italic;
+}
+
+.velum-comment-form {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--spacing-8);
+  padding: var(--spacing-16);
+  background: var(--color-gray-50);
+}
+
+.velum-comment-form textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: var(--spacing-12);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--spacing-4);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  resize: vertical;
+  background: var(--color-white);
+}
+
+.velum-comment-form textarea:focus {
+  outline: none;
+  border-color: var(--color-foundation-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.velum-comment-actions {
+  display: flex;
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-12);
+  justify-content: flex-end;
+}
+
+.velum-comment-actions button {
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+.velum-comment-actions .btn-primary {
+  background: var(--color-foundation-primary);
+  color: var(--color-white);
+  border-color: var(--color-foundation-primary);
+}
+
+.velum-comment-actions .btn-primary:hover {
+  background: var(--color-blue-700);
+  border-color: var(--color-blue-700);
+}
+
+.velum-comment-actions .btn-secondary {
+  background: var(--color-white);
+  color: var(--color-gray-700);
+  border-color: var(--color-gray-300);
+}
+
+.velum-comment-actions .btn-secondary:hover {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-400);
+}
+
+.velum-loading {
+  text-align: center;
+  padding: var(--spacing-24);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.velum-no-comments {
+  text-align: center;
+  padding: var(--spacing-24);
+  color: var(--color-gray-600);
+}
+
+.velum-no-comments p {
+  margin: 0;
+  font-size: var(--font-size-md);
+}
+
+.velum-error {
+  background: var(--color-red-50);
+  border: 1px solid var(--color-red-200);
+  border-radius: var(--spacing-8);
+  padding: var(--spacing-16);
+  margin: var(--spacing-16) 0;
+}
+
+.velum-error p {
+  margin: 0;
+  color: var(--color-red-700);
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .velum-comments {
+    padding: var(--spacing-16);
+    margin: var(--spacing-16) 0;
+  }
+  
+  .velum-comments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-12);
+  }
+  
+  .velum-comment-actions {
+    flex-direction: column;
+  }
+  
+  .velum-comment-actions button {
+    width: 100%;
+  }
+}
+
+/* Token Dialog Styles */
+.velum-token-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+
+.velum-token-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-20);
+}
+
+.velum-token-modal {
+  background: var(--color-white);
+  border-radius: var(--spacing-8);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.velum-token-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-20) var(--spacing-24);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.velum-token-header h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-default);
+}
+
+.velum-token-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-gray-500);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.velum-token-close:hover {
+  background: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+.velum-token-body {
+  padding: var(--spacing-24);
+}
+
+.velum-token-body p {
+  margin: 0 0 var(--spacing-16) 0;
+  color: var(--color-text-default);
+}
+
+.velum-token-steps {
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--spacing-6);
+  padding: var(--spacing-16);
+  margin: var(--spacing-16) 0;
+}
+
+.velum-token-steps h4 {
+  margin: 0 0 var(--spacing-12) 0;
+  font-size: var(--font-size-md);
+  color: var(--color-text-default);
+}
+
+.velum-token-steps ol {
+  margin: 0;
+  padding-left: var(--spacing-20);
+}
+
+.velum-token-steps li {
+  margin-bottom: var(--spacing-8);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-md);
+}
+
+.velum-token-steps code {
+  background: var(--color-gray-200);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--spacing-2);
+  font-size: var(--font-size-xs);
+}
+
+.velum-token-steps a {
+  color: var(--color-foundation-primary);
+  text-decoration: none;
+}
+
+.velum-token-steps a:hover {
+  text-decoration: underline;
+}
+
+.velum-token-input {
+  margin: var(--spacing-16) 0;
+}
+
+.velum-token-input label {
+  display: block;
+  margin-bottom: var(--spacing-8);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-default);
+}
+
+.velum-token-input input {
+  width: 100%;
+  padding: var(--spacing-12);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--spacing-4);
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  box-sizing: border-box;
+}
+
+.velum-token-input input:focus {
+  outline: none;
+  border-color: var(--color-foundation-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.velum-token-input small {
+  display: block;
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+}
+
+.velum-token-actions {
+  display: flex;
+  gap: var(--spacing-12);
+  justify-content: flex-end;
+  padding: var(--spacing-20) var(--spacing-24);
+  border-top: 1px solid var(--color-gray-200);
+  background: var(--color-gray-50);
+}
+
+.velum-token-actions button {
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.2s ease;
+}
+
+/* Message notifications */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Dark theme support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .velum-comments {
+    background: var(--color-gray-900);
+    border-color: var(--color-gray-700);
+  }
+  
+  .velum-comment {
+    background: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  .velum-comment-form {
+    background: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  .velum-comment-form textarea {
+    background: var(--color-gray-900);
+    border-color: var(--color-gray-600);
+    color: var(--color-white);
+  }
+
+  .velum-token-modal {
+    background: var(--color-gray-800);
+    color: var(--color-white);
+  }
+
+  .velum-token-steps {
+    background: var(--color-gray-700);
+    border-color: var(--color-gray-600);
+  }
+
+  .velum-token-input input {
+    background: var(--color-gray-700);
+    border-color: var(--color-gray-600);
+    color: var(--color-white);
+  }
+
+  .velum-token-actions {
+    background: var(--color-gray-700);
+    border-color: var(--color-gray-600);
+  }
+}
+

@@ -1,0 +1,325 @@
+
+/* #region Grid */
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.flex-item-2x {
+    flex: 2;
+}
+
+.flex-item-3x {
+    flex: 3;
+}
+
+.flex-item-4x {
+    flex: 4;
+}
+
+.flex-item-5x {
+    flex: 5;
+}
+
+.flex-item-6x {
+    flex: 6;
+}
+
+/* #endregion */
+
+/* #region Flex */
+.flex {
+    display: flex;
+}
+
+.flex-row-reverse { 
+    flex-direction: row-reverse; 
+}
+
+.flex-center-x-y {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-column-reverse { 
+    flex-direction: column-reverse; 
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-justify-start {
+    justify-content: flex-start;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-justify-around {
+    justify-content: space-around;
+}
+
+.flex-items-start {
+    align-items: flex-start;
+}
+
+.flex-items-end {
+    align-items: flex-end;
+}
+
+.flex-items-center {
+    align-items: center;
+}
+
+.flex-items-baseline {
+    align-items: baseline;
+}
+
+.flex-items-stretch {
+    align-items: stretch;
+}
+
+.flex-alignself-start {
+    align-self: flex-start;
+}
+
+.flex-alignself-end {
+    align-self: flex-end;
+}
+
+.flex-alignself-center {
+    align-self: center;
+}
+
+.flex-alignself-baseline {
+    align-self: baseline;
+}
+
+.flex-alignself-stretch {
+    align-self: stretch;
+}
+
+.flex-order-1 {
+    order: 1;
+}
+
+.flex-order-2 {
+    order: 2;
+}
+
+.flex-order-none {
+    order: inherit;
+}
+
+.flex-basis-100 {
+    flex-basis: 100%;
+}
+
+/* #endregion */
+
+/* #region Display */
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+/* #endregion */
+
+/* #region Borders */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-none {
+    float: none;
+}
+
+/* #endregion */
+
+/* #region Borders */
+.border {
+    border: 1px solid var(--color-gray-200);
+}
+
+.border-x {
+    border-right: 1px solid var(--color-gray-200);
+    border-left: 1px solid var(--color-gray-200);
+}
+
+.border-y {
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.border-top {
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.border-right {
+    border-right: 1px solid var(--color-gray-200);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.border-left {
+    border-left: 1px solid var(--color-gray-200);
+}
+
+.border-2x {
+    border-width: var(----spacing-2);
+}
+
+.border-4x {
+    border-width: var(----spacing-4);
+}
+
+.noborder {border: none !important;}
+/* #endregion */
+
+/* #region Misc */
+.align-left {text-align: left;}
+.align-center {text-align: center;}
+.align-right {text-align: right;}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+/* #endregion */
+
+/* #region Height and Width */
+.h-100 {
+    height: 100%;
+}
+
+/* #endregion */
+
+/* #region SVG Icon Sizing */
+.icon-xs {
+    width: var(--spacing-12);
+    height: var(--spacing-12);
+}
+
+.icon-sm {
+    width: var(--spacing-16);
+    height: var(--spacing-16);
+}
+
+.icon-md {
+    width: var(--spacing-20);
+    height: var(--spacing-20);
+}
+
+.icon-lg {
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+}
+
+.icon-xl {
+    width: var(--spacing-32);
+    height: var(--spacing-32);
+}
+
+.icon-2xl {
+    width: var(--spacing-40);
+    height: var(--spacing-40);
+}
+
+.icon-3xl {
+    width: var(--spacing-48);
+    height: var(--spacing-48);
+}
+
+.icon-4xl {
+    width: var(--spacing-64);
+    height: var(--spacing-64);
+}
+
+/* Icon display and alignment utilities */
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.icon-block {
+    display: block;
+}
+
+.icon-inline {
+    display: inline;
+}
+
+.icon-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Color utilities for SVG icons */
+.icon-current {
+    color: currentColor;
+}
+
+.icon-inherit {
+    color: inherit;
+}
+
+/* #endregion */

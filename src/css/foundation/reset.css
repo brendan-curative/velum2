@@ -1,0 +1,38 @@
+/* #region Resets */
+*:not(input) {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+label[for] {
+    cursor: pointer;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex]:not([tabindex='-1']) {
+    touch-action: manipulation;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* #endregion */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html data-theme="cui">
+  <head>
+    <title>Velum v0.1 &bull; {{ title }}</title>
+    <link rel="icon" href="{{ '/' | url }}src/img/favicon.svg" sizes="any" type="image/svg+xml" />
+
+    <link href="{{ '/' | url }}src/css/velum.css" rel="stylesheet" type="text/css" />
+
+    
+  </head>
+  <body>
+    <header>
+        <div>
+          <h1>{{ heading }}</h1> 
+          <p>{{ secondary }}</p>
+        </div>
+      
+        
+    </header>
+
+    <main>
+        <div class="columns">
+            {% include 'nav.html' %}
+
+            <article>{{ content }}</article>
+        </div>
+    </main>
+
+    <div id="comments">
+      <!-- Comments will be loaded here by the Velum Comments widget -->
+    </div>
+
+    <footer class="pad-xl font-size-s gray-50 txt-gray-700">
+      <div class="flex-row">
+        
+      </div>
+      <div class="flex-row flex-justify-end flex-items-center">
+        
+       
+          <a class="colophon mr-8" href="https://github.com/curative/velum">
+             <img src="{{ '/' | url }}src/img/github.png" alt="Velum github repo">
+        </a> <span>Last modified: &nbsp; {{ page.inputPath | getGitCommitDateFromPath }}</span>
+      </div>
+    </footer>
+
+
+
+  <!-- Velum Comments System -->
+  <script src="{{ '/' | url }}src/js/comments.js"></script>
+  <script 
+    data-repo="curative/velum"
+    data-issue-term="pathname"
+    data-label="velum-comments"
+    data-theme="github-light"
+    crossorigin="anonymous">
+  </script>
+  
+  <script>
+// Prevent default behavior for links with href="#"
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('a[href="#"]');
+    if (link) {
+      event.preventDefault();
+    }
+  });
+});
+    </script>
+
+  </body>
+</html>
