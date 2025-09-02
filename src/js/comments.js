@@ -33,7 +33,7 @@ class VelumComments {
     // Check for existing authentication
     await this.checkAuthStatus();
     
-    this.render();
+    await this.render();
     await this.loadComments();
   }
 
@@ -58,8 +58,12 @@ class VelumComments {
     }
   }
 
-  render() {
-    this.container.innerHTML = this.templates.widget || this.getFallbackWidgetTemplate();
+  async render() {
+    if (this.templates.widget) {
+      this.container.innerHTML = this.templates.widget;
+    } else {
+      this.container.innerHTML = await this.getFallbackWidgetTemplate();
+    }
     this.bindEvents();
   }
 
@@ -510,18 +514,24 @@ class VelumComments {
     `;
   }
 
-  getFallbackWidgetTemplate() {
+  async getFallbackWidgetTemplate() {
+    // Try to fetch the template file as fallback
+    try {
+      const response = await fetch(`${this.config.templatesPath}comments.html`);
+      if (response.ok) {
+        return await response.text();
+      }
+    } catch (error) {
+      console.warn('Failed to fetch fallback template:', error);
+    }
+    
+    // Ultimate fallback - minimal HTML
     return `
       <div class="velum-comments">
         <div class="velum-comments-header">
-          <h3>Comments</h3>
           <div class="velum-comments-auth">
-            <button id="velum-auth-btn" class="btn btn-primary">
-              Sign in with GitHub to comment
-            </button>
-            <button id="velum-logout-btn" class="btn btn-secondary" style="display: none; margin-left: 8px;">
-              Sign out
-            </button>
+            <button id="velum-auth-btn" class="btn btn-primary">Sign in with GitHub to comment</button>
+            <button id="velum-logout-btn" class="btn btn-secondary" style="display: none; margin-left: 8px;">Sign out</button>
           </div>
         </div>
         <div id="velum-comments-list" class="velum-comments-list">
