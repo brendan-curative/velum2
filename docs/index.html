@@ -270,9 +270,7 @@
     
 
     <footer class="pad-xl font-size-s gray-50 txt-gray-700">
-      <div id="comments">
-        <!-- Comments will be loaded here by the Velum Comments widget -->
-      </div>
+      
       <div class="flex-row">
         
       </div>
@@ -285,9 +283,34 @@
       </div>
     </footer>
 
+    <button id="drawer-toggle" class="drawer-toggle" aria-label="Toggle drawer">
+      <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"></path>
+      </svg>
+    </button>
+    
+
+<div id="drawer" class="drawer">
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <h3>Discussion</h3>
+      <button id="drawer-close" class="drawer-close" aria-label="Close drawer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+        <div id="comments">
+            <!-- Comments will be loaded here by the Velum Comments widget -->
+          </div>
+    </div>
+  </div>
+</div>
 
 
-  <!-- Velum Comments System -->
+  <script src="/velum2/src/js/drawer.js"></script>
   <script src="/velum2/src/js/comments.js"></script>
   <script 
     data-repo="brendan-curative/velum2"

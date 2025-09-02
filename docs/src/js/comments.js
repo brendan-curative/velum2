@@ -11,6 +11,7 @@ class VelumComments {
       label: config.label || 'comments',
       theme: config.theme || 'github-light',
       crossorigin: config.crossorigin || 'anonymous',
+      templatesPath: config.templatesPath || '_includes/components/comments/',
       ...config
     };
     
@@ -20,10 +21,14 @@ class VelumComments {
     this.isLoading = false;
     this.isAuthenticated = false;
     this.currentUser = null;
+    this.templates = {};
   }
 
   async init(container) {
     this.container = container;
+    
+    // Load HTML templates
+    await this.loadTemplates();
     
     // Check for existing authentication
     await this.checkAuthStatus();
@@ -32,33 +37,29 @@ class VelumComments {
     await this.loadComments();
   }
 
-  render() {
-    this.container.innerHTML = `
-      <div class="velum-comments">
-        <div class="velum-comments-header">
-          <h3>Comments</h3>
-          <div class="velum-comments-auth">
-            <button id="velum-auth-btn" class="btn btn-primary">
-              Sign in with GitHub to comment
-            </button>
-            <button id="velum-logout-btn" class="btn btn-secondary" style="display: none; margin-left: 8px;">
-              Sign out
-            </button>
-          </div>
-        </div>
-        <div id="velum-comments-list" class="velum-comments-list">
-          <div class="velum-loading">Loading comments...</div>
-        </div>
-        <div id="velum-comment-form" class="velum-comment-form" style="display: none;">
-          <textarea id="velum-comment-textarea" placeholder="Leave a comment" rows="4"></textarea>
-          <div class="velum-comment-actions">
-            <button id="velum-comment-submit" class="btn btn-primary">Comment</button>
-            <button id="velum-comment-cancel" class="btn btn-secondary">Cancel</button>
-          </div>
-        </div>
-      </div>
-    `;
+  async loadTemplates() {
+    try {
+      // Load main comments widget template
+      const widgetResponse = await fetch(`${this.config.templatesPath}comments.html`);
+      if (widgetResponse.ok) {
+        this.templates.widget = await widgetResponse.text();
+      }
+      
+      // Load token dialog template
+      const dialogResponse = await fetch(`${this.config.templatesPath}token-dialog.html`);
+      if (dialogResponse.ok) {
+        this.templates.dialog = await dialogResponse.text();
+      }
+    } catch (error) {
+      console.warn('Failed to load templates, falling back to inline HTML:', error);
+      // Fallback to inline templates if loading fails
+      this.templates.widget = this.getFallbackWidgetTemplate();
+      this.templates.dialog = this.getFallbackDialogTemplate();
+    }
+  }
 
+  render() {
+    this.container.innerHTML = this.templates.widget || this.getFallbackWidgetTemplate();
     this.bindEvents();
   }
 
@@ -264,37 +265,7 @@ class VelumComments {
     // Create a better token input dialog
     const dialog = document.createElement('div');
     dialog.className = 'velum-token-dialog';
-    dialog.innerHTML = `
-      <div class="velum-token-overlay">
-        <div class="velum-token-modal">
-          <div class="velum-token-header">
-            <h3>GitHub Authentication Required</h3>
-            <button class="velum-token-close">&times;</button>
-          </div>
-          <div class="velum-token-body">
-            <p>To comment, you need a GitHub personal access token with access to this repository.</p>
-            <div class="velum-token-steps">
-              <h4>How to create a token:</h4>
-              <ol>
-                <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Personal access tokens</a></li>
-                <li>Click "Generate new token (classic)"</li>
-                <li>Select scopes: <code>repo</code> (for private repos) or <code>public_repo</code> (for public repos)</li>
-                <li>Copy the generated token and paste it below</li>
-              </ol>
-            </div>
-            <div class="velum-token-input">
-              <label for="github-token">Personal Access Token:</label>
-              <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
-              <small>Your token will be stored locally in your browser</small>
-            </div>
-          </div>
-          <div class="velum-token-actions">
-            <button class="btn btn-secondary velum-token-cancel">Cancel</button>
-            <button class="btn btn-primary velum-token-save">Save Token</button>
-          </div>
-        </div>
-      </div>
-    `;
+    dialog.innerHTML = this.templates.dialog || this.getFallbackDialogTemplate();
 
     document.body.appendChild(dialog);
 
@@ -535,6 +506,68 @@ class VelumComments {
     commentsList.innerHTML = `
       <div class="velum-error">
         <p>Error: ${message}</p>
+      </div>
+    `;
+  }
+
+  getFallbackWidgetTemplate() {
+    return `
+      <div class="velum-comments">
+        <div class="velum-comments-header">
+          <h3>Comments</h3>
+          <div class="velum-comments-auth">
+            <button id="velum-auth-btn" class="btn btn-primary">
+              Sign in with GitHub to comment
+            </button>
+            <button id="velum-logout-btn" class="btn btn-secondary" style="display: none; margin-left: 8px;">
+              Sign out
+            </button>
+          </div>
+        </div>
+        <div id="velum-comments-list" class="velum-comments-list">
+          <div class="velum-loading">Loading comments...</div>
+        </div>
+        <div id="velum-comment-form" class="velum-comment-form" style="display: none;">
+          <textarea id="velum-comment-textarea" placeholder="Leave a comment" rows="4"></textarea>
+          <div class="velum-comment-actions">
+            <button id="velum-comment-submit" class="btn btn-primary">Comment</button>
+            <button id="velum-comment-cancel" class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  getFallbackDialogTemplate() {
+    return `
+      <div class="velum-token-overlay">
+        <div class="velum-token-modal">
+          <div class="velum-token-header">
+            <h3>GitHub Authentication Required</h3>
+            <button class="velum-token-close">&times;</button>
+          </div>
+          <div class="velum-token-body">
+            <p>To comment, you need a GitHub personal access token with access to this repository.</p>
+            <div class="velum-token-steps">
+              <h4>How to create a token:</h4>
+              <ol>
+                <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Personal access tokens</a></li>
+                <li>Click "Generate new token (classic)"</li>
+                <li>Select scopes: <code>repo</code> (for private repos) or <code>public_repo</code> (for public repos)</li>
+                <li>Copy the generated token and paste it below</li>
+              </ol>
+            </div>
+            <div class="velum-token-input">
+              <label for="github-token">Personal Access Token:</label>
+              <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+              <small>Your token will be stored locally in your browser</small>
+            </div>
+          </div>
+          <div class="velum-token-actions">
+            <button class="btn btn-secondary velum-token-cancel">Cancel</button>
+            <button class="btn btn-primary velum-token-save">Save Token</button>
+          </div>
+        </div>
       </div>
     `;
   }
