@@ -1,0 +1,134 @@
+/* Drawer Toggle Button */
+.drawer-toggle {
+  position: fixed;
+  bottom: var(--spacing-24);
+  right: var(--spacing-16);
+  z-index: 1000;
+  background: var(--color-gray-900);
+  border: 1px solid var(--color-gray-900);
+  border-radius: 50%;
+  padding: var(--spacing-12);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.drawer-toggle:hover,
+.drawer-toggle:focus {
+    background: var(--color-gray-900);
+    border: 1px solid var(--color-gray-100);
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+}
+
+.drawer-toggle svg {
+  display: block;
+  height: var(--spacing-24);
+  width: var(--spacing-24);
+  color: var(--color-gray-200);
+  transition: all 0.3s ease;
+  
+}
+
+.drawer-toggle[aria-expanded="true"] {
+  background: var(--color-primary-sky-blue);
+  border-color: var(--color-white);
+  opacity: 1;
+}
+
+.drawer-toggle[aria-expanded="true"] svg {
+  color: var(---color-white);
+  stroke: var(--color-white);
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+/* Drawer Container */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  background: rgba(33, 36, 70, 0.8);
+  backdrop-filter: blur(2px);
+  border-left: 1px solid var(--color-gray-900);
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+/* Drawer Content */
+.drawer-content {
+  padding: var(--spacing-24);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-24);
+  padding-bottom: var(--spacing-16);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.drawer-header h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-default);
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  padding: var(--spacing-8);
+  cursor: pointer;
+  border-radius: var(--spacing-4);
+  transition: background-color 0.2s ease;
+}
+
+.drawer-close:hover,
+.drawer-close:focus {
+  background: var(--color-gray-100);
+}
+
+.drawer-close svg {
+  display: block;
+  color: var(--color-text-default);
+}
+
+.drawer-body {
+  flex: 1;
+}
+
+.drawer-body p {
+  color: var(--color-text-default);
+  line-height: var(--line-height-md);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .drawer {
+    width: 280px;
+  }
+  
+  .drawer-toggle {
+    top: var(--spacing-16);
+    right: var(--spacing-16);
+  }
+}

@@ -13,14 +13,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding-bottom: var(--spacing-16);
 }
 
 .velum-comments-header h3 {
   margin: 0;
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
   color: var(--color-text-default);
 }
 
@@ -46,18 +43,22 @@
 .velum-comments-count {
   font-size: var(--font-size-sm);
   color: var(--color-white);
-  margin-bottom: var(--spacing-16);
-  padding-bottom: var(--spacing-8);
+  margin: var(--spacing-16) 0 0 0;
+  padding: var(--spacing-8) 0;
   border-bottom: 1px solid rgba(33, 36, 70, 0.4);
 }
 
 .velum-comment {
-  margin-bottom: var(--spacing-24);
-  padding: var(--spacing-16);
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-8) var(--spacing-16);
   border: 1px solid var(--color-gray-900);
   border-radius: var(--spacing-8);
   background: rgba(33, 36, 70, 0.4);
   backdrop-filter: blur(2px);
+}
+
+.velum-comment:nth-child(even) {
+  background: rgba(33, 36, 70, 0.2);
 }
 
 .velum-comment:last-child {
@@ -67,7 +68,6 @@
 .velum-comment-header {
   display: flex;
   align-items: center;
-  margin-bottom: var(--spacing-12);
 }
 
 .velum-comment-avatar {
@@ -85,9 +85,10 @@
 
 .velum-comment-author {
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-xs);
   color: var(--color-gray-400);
-  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-2);
 }
 
 .velum-comment-date {
@@ -99,6 +100,7 @@
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
   color: var(--color-white);
+  margin-bottom: var(--spacing-8);  
 }
 
 .velum-comment-body p {
@@ -259,7 +261,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(33, 36, 70, 0.8);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;

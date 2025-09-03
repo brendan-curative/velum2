@@ -43,12 +43,12 @@
     </footer>
 
     <button id="drawer-toggle" class="drawer-toggle" aria-label="Toggle drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ratio-icon lucide-ratio"><rect width="12" height="20" x="6" y="2" rx="2"/><rect width="20" height="12" x="2" y="6" rx="2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit-icon lucide-orbit"><path d="M20.341 6.484A10 10 0 0 1 10.266 21.85"/><path d="M3.659 17.516A10 10 0 0 1 13.74 2.152"/><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/></svg>
     </button>
-    {% include 'components/drawer.html' %}
+    {% include 'components/drawer/drawer.html' %}
 
-  <script src="{{ '/' | url }}src/js/drawer.js"></script>
-  <script src="{{ '/' | url }}src/js/comments.js"></script>
+  <script src="{{ '/' | url }}src/components/drawer/drawer.js"></script>
+  <script src="{{ '/' | url }}src/components/comments/comments.js"></script>
   <script 
     data-repo="brendan-curative/velum2"
     data-issue-term="pathname"

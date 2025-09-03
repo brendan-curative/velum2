@@ -11,7 +11,7 @@ class VelumComments {
       label: config.label || 'comments',
       theme: config.theme || 'github-light',
       crossorigin: config.crossorigin || 'anonymous',
-      templatesPath: config.templatesPath || '_includes/components/comments/',
+      templatesPath: config.templatesPath || 'src/components/comments/',
       ...config
     };
     
@@ -50,11 +50,21 @@ class VelumComments {
       if (dialogResponse.ok) {
         this.templates.dialog = await dialogResponse.text();
       }
+      
+      // Load individual comment template
+      const commentResponse = await fetch(`${this.config.templatesPath}comment.html`);
+      if (commentResponse.ok) {
+        this.templates.comment = await commentResponse.text();
+        console.log('Comment template loaded successfully');
+      } else {
+        console.warn('Failed to load comment template:', commentResponse.status);
+      }
     } catch (error) {
       console.warn('Failed to load templates, falling back to inline HTML:', error);
       // Fallback to inline templates if loading fails
-      this.templates.widget = this.getFallbackWidgetTemplate();
+      this.templates.widget = await this.getFallbackWidgetTemplate();
       this.templates.dialog = this.getFallbackDialogTemplate();
+      // Don't set fallback for comment template - let renderComment handle it
     }
   }
 
@@ -205,20 +215,16 @@ class VelumComments {
       minute: '2-digit'
     });
 
-    return `
-      <div class="velum-comment">
-        <div class="velum-comment-header">
-          <img src="${comment.user.avatar_url}" alt="${comment.user.login}" class="velum-comment-avatar">
-          <div class="velum-comment-meta">
-            <strong class="velum-comment-author">${comment.user.login}</strong>
-            <span class="velum-comment-date">${createdAt}</span>
-          </div>
-        </div>
-        <div class="velum-comment-body">
-          ${this.parseMarkdown(comment.body)}
-        </div>
-      </div>
-    `;
+    if (!this.templates.comment) {
+      console.error('Comment template not loaded');
+      return '<div class="velum-error">Comment template not available</div>';
+    }
+
+    return this.templates.comment
+      .replace(/\{\{avatar_url\}\}/g, comment.user.avatar_url)
+      .replace(/\{\{username\}\}/g, comment.user.login)
+      .replace(/\{\{created_at\}\}/g, createdAt)
+      .replace(/\{\{body\}\}/g, this.parseMarkdown(comment.body));
   }
 
   parseMarkdown(text) {
@@ -515,37 +521,8 @@ class VelumComments {
   }
 
   async getFallbackWidgetTemplate() {
-    // Try to fetch the template file as fallback
-    try {
-      const response = await fetch(`${this.config.templatesPath}comments.html`);
-      if (response.ok) {
-        return await response.text();
-      }
-    } catch (error) {
-      console.warn('Failed to fetch fallback template:', error);
-    }
-    
-    // Ultimate fallback - minimal HTML
-    return `
-      <div class="velum-comments">
-        <div class="velum-comments-header">
-          <div class="velum-comments-auth">
-            <button id="velum-auth-btn" class="btn btn-primary">Sign in with GitHub to comment</button>
-            <button id="velum-logout-btn" class="btn btn-secondary" style="display: none; margin-left: 8px;">Sign out</button>
-          </div>
-        </div>
-        <div id="velum-comments-list" class="velum-comments-list">
-          <div class="velum-loading">Loading comments...</div>
-        </div>
-        <div id="velum-comment-form" class="velum-comment-form" style="display: none;">
-          <textarea id="velum-comment-textarea" placeholder="Leave a comment" rows="4"></textarea>
-          <div class="velum-comment-actions">
-            <button id="velum-comment-submit" class="btn btn-primary">Comment</button>
-            <button id="velum-comment-cancel" class="btn btn-secondary">Cancel</button>
-          </div>
-        </div>
-      </div>
-    `;
+    console.error('Widget template not loaded');
+    return '<div class="velum-error">Comments widget template not available</div>';
   }
 
   getFallbackDialogTemplate() {

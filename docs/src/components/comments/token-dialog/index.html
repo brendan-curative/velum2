@@ -1,0 +1,30 @@
+<div class="velum-token-overlay">
+  <div class="velum-token-modal">
+    <div class="velum-token-header">
+      <h3>GitHub Authentication Required</h3>
+      <button class="velum-token-close">&times;</button>
+    </div>
+    <div class="velum-token-body">
+      <p>To comment, you need a GitHub personal access token with access to this repository.</p>
+      <div class="velum-token-steps">
+        <h4>How to create a token:</h4>
+        <ol>
+          <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Personal access tokens</a></li>
+          <li>Click "Generate new token (classic)"</li>
+          <li>Give your token repo access and save the token</li>
+          <!-- <li>Select scopes: <code>repo</code> (for private repos) or <code>public_repo</code> (for public repos)</li>-->
+          <li>Copy the generated token and paste it below</li>
+        </ol>
+      </div>
+      <div class="velum-token-input">
+        <label for="github-token">Personal Access Token:</label>
+        <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+        <small>Your token will be stored locally in your browser</small>
+      </div>
+    </div>
+    <div class="velum-token-actions">
+      <button class="btn btn-secondary velum-token-cancel">Cancel</button>
+      <button class="btn btn-primary velum-token-save">Save Token</button>
+    </div>
+  </div>
+</div>
