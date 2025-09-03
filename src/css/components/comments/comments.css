@@ -1,20 +1,20 @@
 /* Velum Comments Widget Styles */
 
 .velum-comments {
-  background: var(--color-white);
+  background: rgba(33, 36, 70, 0.8);
+  
   border-radius: var(--spacing-8);
   padding: var(--spacing-24);
   margin: var(--spacing-24) 0;
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--color-gray-900);
 }
 
 .velum-comments-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-24);
+
   padding-bottom: var(--spacing-16);
-  border-bottom: 1px solid var(--color-gray-200);
 }
 
 .velum-comments-header h3 {
@@ -45,18 +45,19 @@
 
 .velum-comments-count {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-600);
+  color: var(--color-white);
   margin-bottom: var(--spacing-16);
   padding-bottom: var(--spacing-8);
-  border-bottom: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid rgba(33, 36, 70, 0.4);
 }
 
 .velum-comment {
   margin-bottom: var(--spacing-24);
   padding: var(--spacing-16);
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--color-gray-900);
   border-radius: var(--spacing-8);
-  background: var(--color-white);
+  background: rgba(33, 36, 70, 0.4);
+  backdrop-filter: blur(2px);
 }
 
 .velum-comment:last-child {
@@ -70,8 +71,8 @@
 }
 
 .velum-comment-avatar {
-  width: var(--spacing-32);
-  height: var(--spacing-32);
+  width: var(--spacing-24);
+  height: var(--spacing-24);
   border-radius: 50%;
   margin-right: var(--spacing-12);
   border: 1px solid var(--color-gray-200);
@@ -85,7 +86,7 @@
 .velum-comment-author {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-default);
+  color: var(--color-gray-400);
   margin-bottom: var(--spacing-2);
 }
 
@@ -97,7 +98,7 @@
 .velum-comment-body {
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);
-  color: var(--color-text-default);
+  color: var(--color-white);
 }
 
 .velum-comment-body p {
@@ -436,48 +437,4 @@
   }
 }
 
-/* Dark theme support (if needed) */
-@media (prefers-color-scheme: dark) {
-  .velum-comments {
-    background: var(--color-gray-900);
-    border-color: var(--color-gray-700);
-  }
-  
-  .velum-comment {
-    background: var(--color-gray-800);
-    border-color: var(--color-gray-700);
-  }
-  
-  .velum-comment-form {
-    background: var(--color-gray-800);
-    border-color: var(--color-gray-700);
-  }
-  
-  .velum-comment-form textarea {
-    background: var(--color-gray-900);
-    border-color: var(--color-gray-600);
-    color: var(--color-white);
-  }
-
-  .velum-token-modal {
-    background: var(--color-gray-800);
-    color: var(--color-white);
-  }
-
-  .velum-token-steps {
-    background: var(--color-gray-700);
-    border-color: var(--color-gray-600);
-  }
-
-  .velum-token-input input {
-    background: var(--color-gray-700);
-    border-color: var(--color-gray-600);
-    color: var(--color-white);
-  }
-
-  .velum-token-actions {
-    background: var(--color-gray-700);
-    border-color: var(--color-gray-600);
-  }
-}
 
