@@ -103,7 +103,9 @@ header, footer {flex: 0;}
       text-decoration: underline;
     }
 
-    a.colophon:hover, a.colophon:focus {}
+    a.colophon:hover, a.colophon:focus {
+      color: var(--color-blue-600);
+    }
 
     .colophon img {
       height: var(--spacing-16);
@@ -333,9 +335,7 @@ footer {
     padding: var(--spacing-16) var(--spacing-24);
 }
 
-  footer a,
-  footer a:visited {
-  }
+
   
 /* #endregion */
 
@@ -394,7 +394,6 @@ aside a:not(.logo).active {
 
 aside a:not(.logo) svg {
     display: block;
-    vertical-align: middle;
     width: var(--spacing-24);
     height: var(--spacing-24);
 }
