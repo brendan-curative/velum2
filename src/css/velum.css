@@ -229,6 +229,7 @@ section {
 
   .dashboard .cashcard div {
     padding: var(--spacing-16);
+    border-radius: var(--spacing-8);
     flex: 1;
     justify-self: center;
     position: relative;
