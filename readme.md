@@ -10,3 +10,5 @@ First run
 
 Then
 `npx @11ty/eleventy --serve`
+
+Or just `npm start`

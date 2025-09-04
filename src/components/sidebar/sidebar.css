@@ -1,0 +1,90 @@
+/* Sidebar Navigation Styles */
+
+aside nav {
+    background: var(--color-surface-neutral);
+    color: var(--color-white);
+    position: fixed;
+    width: 272px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    padding: var(--spacing-16) var(--spacing-8) var(--spacing-32) var(--spacing-8);
+}
+
+    aside nav div {
+        padding-bottom: var(--spacing-24);
+        border-bottom: 2px solid var(--color-gray-200);
+        margin: var(--spacing-16) 0;
+    }
+
+
+aside a:not(.logo),
+aside a:not(.logo):visited {
+    background: none;
+    display: grid;
+    grid-template-columns: 35px 1fr auto;
+    align-items: center;
+    color: var(--color-text-default);
+    font-size: 18px;
+    text-decoration: none;
+    padding: var(--spacing-12) var(--spacing-16);
+    border-radius: var(--spacing-8);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 200;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+  aside a:not(.logo):hover,
+  aside a:not(.logo):focus {
+    color: var(--color-foundation-primary);
+    text-decoration: none;
+    transform: translateX(3px);
+  }
+
+
+aside a:not(.logo).active {
+    background: var(--color-white);
+    color: var(--color-foundation-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+aside a:not(.logo) svg {
+    display: block;
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+}
+
+.linklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+  .linklist li {
+    padding-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .linklist li:last-child {
+    border-bottom: none;
+  }
+
+  .linklist a {
+    background-image: url('data:image/svg+xml,<svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>');
+    background-size: 16px 16px;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    display: block;
+    color: var(--color-text-default);
+    text-decoration: none;
+  }
+
+  .linklist a:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-foundation-primary);
+  }
