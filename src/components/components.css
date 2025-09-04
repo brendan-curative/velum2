@@ -1,4 +1,6 @@
 @import 'sidebar/sidebar.css';
+@import 'alert/alert.css';
+@import 'badge/badge.css';
 @import 'button/button.css';
 @import 'comments/comments.css';
 @import 'drawer/drawer.css';

@@ -1,0 +1,154 @@
+/* Alert Component Styles */
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: var(--spacing-4);
+  overflow: hidden;
+  font-family: "Figtree", sans-serif;
+}
+
+/* Alert Top Border */
+.alert-border {
+  height: var(--spacing-4);
+  width: 100%;
+}
+
+/* Alert Content Container */
+.alert-content {
+  padding: var(--spacing-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-10);
+}
+
+/* Alert Main Content Row */
+.alert-main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+/* Alert Icon */
+.alert-icon {
+  flex-shrink: 0;
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Alert Text Content */
+.alert-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  min-width: 0;
+}
+
+.alert-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--spacing-20);
+  margin: 0;
+}
+
+.alert-message {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--spacing-24);
+  margin: 0;
+}
+
+/* Alert Close Button */
+.alert-close {
+  flex-shrink: 0;
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--spacing-4);
+  transition: background-color 0.2s ease;
+}
+
+.alert-close:hover,
+.alert-close:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.alert-close svg {
+  width: 75%;
+  height: 75%;
+  display: block;
+}
+
+/* Success Alert */
+.alert-success {
+  background-color: var(--color-surface-success);
+}
+
+.alert-success .alert-border {
+  background-color: var(--color-text-success);
+}
+
+.alert-success .alert-title,
+.alert-success .alert-message {
+  color: var(--color-text-success);
+}
+
+.alert-success .alert-icon svg,
+.alert-success .alert-close svg {
+  color: var(--color-text-success);
+}
+
+/* Warning Alert */
+.alert-warning {
+  background-color: var(--color-surface-warning);
+}
+
+.alert-warning .alert-border {
+  background-color: var(--color-text-warning);
+}
+
+.alert-warning .alert-title,
+.alert-warning .alert-message {
+  color: var(--color-text-warning);
+}
+
+.alert-warning .alert-icon svg,
+.alert-warning .alert-close svg {
+  color: var(--color-text-warning);
+}
+
+/* Critical/Fail Alert */
+.alert-critical {
+  background-color: var(--color-surface-critical);
+}
+
+.alert-critical .alert-border {
+  background-color: var(--color-text-critical);
+}
+
+.alert-critical .alert-title,
+.alert-critical .alert-message {
+  color: var(--color-text-critical);
+}
+
+.alert-critical .alert-icon svg,
+.alert-critical .alert-close svg {
+  color: var(--color-text-critical);
+}

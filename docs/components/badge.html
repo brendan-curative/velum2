@@ -1,0 +1,63 @@
+---
+layout: layout.html
+title: Badge Component
+heading: Badge Component
+secondary: Status badges with optional icons
+status: draft
+---
+
+<section>
+    <p class="mb-16"><a class="iconlink" href="../">
+        <svg class="icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"></path>
+          </svg>
+      Back to components</a></p>
+      
+  <h2>Badge Component</h2>
+  <p>Badge components provide status indicators with color-coded variants and optional icons.</p>
+
+  <h3>Large Badges</h3>
+    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+        <span class="badge badge-default badge-large">Default</span>
+        <span class="badge badge-pending badge-large">Pending</span>
+        <span class="badge badge-approved badge-large">Approved</span>
+        <span class="badge badge-rejected badge-large">Rejected</span>
+        <span class="badge badge-warning badge-large">Warning</span>
+    </div>
+    
+    <h3>Large Badges with Icons</h3>
+    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+        <span data-badge data-badge-status="default" data-badge-size="large" data-badge-icon="true" data-badge-text="Default">Default</span>
+        <span data-badge data-badge-status="pending" data-badge-size="large" data-badge-icon="true" data-badge-text="Pending">Pending</span>
+        <span data-badge data-badge-status="approved" data-badge-size="large" data-badge-icon="true" data-badge-text="Approved">Approved</span>
+        <span data-badge data-badge-status="rejected" data-badge-size="large" data-badge-icon="true" data-badge-text="Rejected">Rejected</span>
+        <span data-badge data-badge-status="warning" data-badge-size="large" data-badge-icon="true" data-badge-text="Warning">Warning</span>
+    </div>
+    
+    <h3>Small Badges</h3>
+    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+        <span class="badge badge-default badge-small">Default</span>
+        <span class="badge badge-pending badge-small">Pending</span>
+        <span class="badge badge-approved badge-small">Approved</span>
+        <span class="badge badge-rejected badge-small">Rejected</span>
+        <span class="badge badge-warning badge-small">Warning</span>
+    </div>
+    
+    <h3>Small Badges with Icons</h3>
+    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+        <span data-badge data-badge-status="default" data-badge-size="small" data-badge-icon="true" data-badge-text="Default">Default</span>
+        <span data-badge data-badge-status="pending" data-badge-size="small" data-badge-icon="true" data-badge-text="Pending">Pending</span>
+        <span data-badge data-badge-status="approved" data-badge-size="small" data-badge-icon="true" data-badge-text="Approved">Approved</span>
+        <span data-badge data-badge-status="rejected" data-badge-size="small" data-badge-icon="true" data-badge-text="Rejected">Rejected</span>
+        <span data-badge data-badge-status="warning" data-badge-size="small" data-badge-icon="true" data-badge-text="Warning">Warning</span>
+    </div>
+    
+    <h3>Extra Small Badges</h3>
+    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+        <span class="badge badge-default badge-xsmall">Default</span>
+        <span class="badge badge-pending badge-xsmall">Pending</span>
+        <span class="badge badge-approved badge-xsmall">Approved</span>
+        <span class="badge badge-rejected badge-xsmall">Rejected</span>
+        <span class="badge badge-warning badge-xsmall">Warning</span>
+    </div>
+</section>

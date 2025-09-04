@@ -1,0 +1,45 @@
+<h1>Velum Component Development Checklist</h1>
+<h2>Pre-Development</h2>
+<ul>
+<li>[ ] Analyze Figma design thoroughly</li>
+<li>[ ] Identify all states, variants, and interactions</li>
+<li>[ ] Plan CSS class naming structure</li>
+</ul>
+<h2>Development</h2>
+<ul>
+<li>[ ] Create component directory: <code>src/components/[name]/</code></li>
+<li>[ ] Write CSS using design system variables only</li>
+<li>[ ] Create HTML template with semantic markup</li>
+<li>[ ] Add minimal JavaScript if needed</li>
+<li>[ ] Update <code>src/components/components.css</code> import</li>
+</ul>
+<h2>Documentation</h2>
+<ul>
+<li>[ ] Create examples page: <code>components/[name].html</code></li>
+<li>[ ] Include all variants and usage examples</li>
+<li>[ ] Update <code>components/index.html</code> with link</li>
+<li>[ ] Add accessibility attributes and ARIA labels</li>
+</ul>
+<h2>Quality Check</h2>
+<ul>
+<li>[ ] No hardcoded colors (use CSS variables)</li>
+<li>[ ] No hardcoded spacing (use spacing variables)</li>
+<li>[ ] Proper semantic HTML structure</li>
+<li>[ ] Consistent naming conventions</li>
+<li>[ ] Works across different content lengths</li>
+</ul>
+<h2>Deployment</h2>
+<ul>
+<li>[ ] Copy component to <code>docs/src/components/</code></li>
+<li>[ ] Copy CSS imports to <code>docs/src/components/components.css</code></li>
+<li>[ ] Copy examples page (<code>[name].html</code>) to <code>docs/components/</code></li>
+<li>[ ] Copy updated index to <code>docs/components/</code></li>
+</ul>
+<h2>Reference Files</h2>
+<ul>
+<li><code>src/css/foundation/colors.css</code> - Color variables</li>
+<li><code>src/css/foundation/spacing.css</code> - Spacing variables</li>
+<li><code>src/css/foundation/typography.css</code> - Typography variables</li>
+<li><code>src/components/badge/</code> - Static component example</li>
+<li><code>src/components/alert/</code> - Interactive component example</li>
+</ul>

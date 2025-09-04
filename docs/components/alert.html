@@ -1,0 +1,123 @@
+---
+layout: layout.html
+title: Alert Component
+heading: Alert Component
+secondary: Status alerts with icons and dismiss functionality
+---
+
+<section>
+    <p class="mb-16"><a class="iconlink" href="../">
+        <svg class="icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"></path>
+          </svg>
+      Back to components</a></p>
+      
+  <h2>Alert Component</h2>
+  <p>Alert components provide contextual feedback messages for typical user actions with a colored top border, icon, and close button.</p>
+
+  <h3>Success Alert</h3>
+  <div style="margin-bottom: 32px;">
+    <div class="alert alert-success">
+      <div class="alert-border"></div>
+      <div class="alert-content">
+        <div class="alert-main">
+          <div class="alert-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="alert-text">
+            <h4 class="alert-title">This is a success alert</h4>
+            <p class="alert-message">Your changes have been saved successfully.</p>
+          </div>
+          <button class="alert-close" aria-label="Close alert">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Warning Alert</h3>
+  <div style="margin-bottom: 32px;">
+    <div class="alert alert-warning">
+      <div class="alert-border"></div>
+      <div class="alert-content">
+        <div class="alert-main">
+          <div class="alert-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="alert-text">
+            <h4 class="alert-title">This is a warning alert</h4>
+            <p class="alert-message">Please review your information before proceeding.</p>
+          </div>
+          <button class="alert-close" aria-label="Close alert">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Critical/Error Alert</h3>
+  <div style="margin-bottom: 32px;">
+    <div class="alert alert-critical">
+      <div class="alert-border"></div>
+      <div class="alert-content">
+        <div class="alert-main">
+          <div class="alert-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2"/>
+              <path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="alert-text">
+            <h4 class="alert-title">This is a fail alert</h4>
+            <p class="alert-message">An error occurred while processing your request.</p>
+          </div>
+          <button class="alert-close" aria-label="Close alert">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Usage</h3>
+  <div class="code">
+&lt;div class="alert alert-success"&gt;
+  &lt;div class="alert-border"&gt;&lt;/div&gt;
+  &lt;div class="alert-content"&gt;
+    &lt;div class="alert-main"&gt;
+      &lt;div class="alert-icon"&gt;
+        &lt;!-- SVG icon --&gt;
+      &lt;/div&gt;
+      &lt;div class="alert-text"&gt;
+        &lt;h4 class="alert-title"&gt;Alert Title&lt;/h4&gt;
+        &lt;p class="alert-message"&gt;Alert message&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;button class="alert-close"&gt;
+        &lt;!-- Close icon --&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </div>
+
+  <h3>Available Variants</h3>
+  <ul>
+    <li><code>.alert-success</code> - Green success alert</li>
+    <li><code>.alert-warning</code> - Orange warning alert</li>
+    <li><code>.alert-critical</code> - Red error/critical alert</li>
+  </ul>
+</section>
