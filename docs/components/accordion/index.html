@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-theme="cui">
   <head>
-    <title>Velum v0.1 &bull; Components</title>
+    <title>Velum v0.1 &bull; Accordion Component</title>
     <link rel="icon" href="/velum2/src/img/favicon.svg" sizes="any" type="image/svg+xml" />
 
     <link href="/velum2/src/css/velum.css" rel="stylesheet" type="text/css" />
@@ -11,8 +11,8 @@
   <body>
     <header>
         <div>
-          <h1>Components</h1> 
-          <p>Examples of the components built with Velum</p>
+          <h1>Accordion Component</h1> 
+          <p>Collapsible content sections with smooth animations</p>
         </div>
       
         
@@ -104,13 +104,160 @@
 </aside>
 
             <article>
-<section>
-    <ul>
-        <li><a href="accordion/">Accordion</a></li>
-        <li><a href="alert/">Alert</a></li>
-        <li><a href="badge/">Badge</a></li>
-    </ul>
-</section></article>
+<section class="pad-xl">
+  <p class="mb-16"><a class="iconlink" href="../">
+      <svg class="icon" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"></path>
+        </svg>
+    Back to components</a></p>
+    
+<h2>Accordion Component</h2>
+<p>Accordion components allow users to toggle the display of content sections, providing an organized way to present information in a compact space.</p>
+
+<h3>Single Accordion</h3>
+<div style="margin-bottom: 32px; max-width: 800px;">
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-1">
+      <div class="accordion-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="accordion-title">Common Uses</h3>
+      <span class="sr-only">Click to expand</span>
+    </button>
+    <div class="accordion-content" id="accordion-content-1">
+      <div class="accordion-content-inner">
+        <p>Aspirin is used to reduce fever and relieve mild to moderate pain from conditions such as muscle aches, toothaches, common cold, and headaches. It may also be used to reduce pain and swelling in conditions such as arthritis. Aspirin is known as a salicylate and a nonsteroidal anti-inflammatory drug (NSAID).</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Multiple Accordions</h3>
+<div style="margin-bottom: 32px; max-width: 800px;">
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-2">
+      <div class="accordion-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="accordion-title">Side Effects</h3>
+      <span class="sr-only">Click to expand</span>
+    </button>
+    <div class="accordion-content" id="accordion-content-2">
+      <div class="accordion-content-inner">
+        <p>Common side effects may include stomach upset, heartburn, drowsiness, or mild headache. More serious side effects can include stomach bleeding, allergic reactions, or ringing in the ears. Contact your doctor if you experience any severe or persistent side effects.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-3">
+      <div class="accordion-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="accordion-title">Dosage Instructions</h3>
+      <span class="sr-only">Click to expand</span>
+    </button>
+    <div class="accordion-content" id="accordion-content-3">
+      <div class="accordion-content-inner">
+        <p>For adults and children 12 years and over: Take 1-2 tablets every 4 hours as needed. Do not exceed 12 tablets in 24 hours unless directed by a doctor. Take with food or milk if stomach upset occurs. Do not give to children under 12 years without consulting a doctor.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-4">
+      <div class="accordion-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="accordion-title">Warnings & Precautions</h3>
+      <span class="sr-only">Click to expand</span>
+    </button>
+    <div class="accordion-content" id="accordion-content-4">
+      <div class="accordion-content-inner">
+        <p>Do not use if you are allergic to aspirin or any other pain reliever/fever reducer. Ask a doctor before use if you have stomach problems, high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or bleeding problems. Stop use and ask a doctor if symptoms persist for more than 10 days.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Accordion Group (Single Open)</h3>
+<div style="margin-bottom: 32px; max-width: 800px;">
+  <div class="accordion-group">
+    <div class="accordion">
+      <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-5">
+        <div class="accordion-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="accordion-title">Product Information</h3>
+        <span class="sr-only">Click to expand</span>
+      </button>
+      <div class="accordion-content" id="accordion-content-5">
+        <div class="accordion-content-inner">
+          <p>This medication contains aspirin as the active ingredient. Each tablet contains 325mg of aspirin. Also contains corn starch, hypromellose, powdered cellulose, and triacetin as inactive ingredients.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button class="accordion-header" aria-expanded="false" aria-controls="accordion-content-6">
+        <div class="accordion-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="accordion-title">Storage Instructions</h3>
+        <span class="sr-only">Click to expand</span>
+      </button>
+      <div class="accordion-content" id="accordion-content-6">
+        <div class="accordion-content-inner">
+          <p>Store at room temperature between 68-77°F (20-25°C). Keep in original container and protect from moisture. Do not store in bathroom or near heat sources. Keep out of reach of children and pets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Usage</h3>
+<div class="code">
+&lt;div class="accordion"&gt;
+  &lt;button class="accordion-header" aria-expanded="false" aria-controls="content-id"&gt;
+    &lt;div class="accordion-icon"&gt;
+      &lt;!-- Chevron SVG --&gt;
+    &lt;/div&gt;
+    &lt;h3 class="accordion-title"&gt;Section Title&lt;/h3&gt;
+    &lt;span class="sr-only"&gt;Click to expand&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="accordion-content" id="content-id"&gt;
+    &lt;div class="accordion-content-inner"&gt;
+      &lt;p&gt;Content goes here...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</div>
+
+<h3>Features</h3>
+<ul>
+  <li><strong>Smooth animations:</strong> CSS transitions for expand/collapse</li>
+  <li><strong>Keyboard accessible:</strong> Full keyboard navigation support</li>
+  <li><strong>Focus management:</strong> Visual focus indicators</li>
+  <li><strong>ARIA compliant:</strong> Proper accessibility attributes</li>
+  <li><strong>Single-open mode:</strong> Use <code>.accordion-group</code> wrapper</li>
+  <li><strong>Responsive:</strong> Works across all screen sizes</li>
+</ul>
+
+<script src="/velum2/src/components/accordion/accordion.js"></script>
+</section>
+</article>
         </div>
     </main>
 
@@ -126,7 +273,7 @@
        
           <a class="colophon mr-8" href="https://github.com/brendan-curative/velum2">
              <img src="/velum2/src/img/github.png" alt="Velum github repo">
-        </a> <span>Last modified: &nbsp; Thu Sep 04 2025 17:03:18 GMT-0400 (Eastern Daylight Time)</span>
+        </a> <span>Last modified: &nbsp; </span>
       </div>
     </footer>
 
