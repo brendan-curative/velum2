@@ -1,0 +1,375 @@
+/* Icon Component - Heroicons Integration */
+
+/* Base heroicon class - 24px solid icons by default */
+.heroicon {
+  display: inline-block;
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Size modifiers */
+.heroicon-16 {
+  width: var(--spacing-16);
+  height: var(--spacing-16);
+}
+
+.heroicon-20 {
+  width: var(--spacing-20);
+  height: var(--spacing-20);
+}
+
+/* Common Icons - 24px Solid (Default) */
+.heroicon-user {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/user.svg');
+}
+
+.heroicon-home {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/home.svg');
+}
+
+.heroicon-menu {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/bars-3.svg');
+}
+
+.heroicon-x-mark {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/x-mark.svg');
+}
+
+.heroicon-chevron-down {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/chevron-down.svg');
+}
+
+.heroicon-chevron-up {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/chevron-up.svg');
+}
+
+.heroicon-chevron-left {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/chevron-left.svg');
+}
+
+.heroicon-chevron-right {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/chevron-right.svg');
+}
+
+.heroicon-plus {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/plus.svg');
+}
+
+.heroicon-minus {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/minus.svg');
+}
+
+.heroicon-pencil {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/pencil.svg');
+}
+
+.heroicon-trash {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/trash.svg');
+}
+
+.heroicon-check {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/check.svg');
+}
+
+.heroicon-heart {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/heart.svg');
+}
+
+.heroicon-star {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/star.svg');
+}
+
+.heroicon-bell {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/bell.svg');
+}
+
+.heroicon-envelope {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/envelope.svg');
+}
+
+.heroicon-phone {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/phone.svg');
+}
+
+.heroicon-magnifying-glass {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/magnifying-glass.svg');
+}
+
+.heroicon-cog-6-tooth {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/cog-6-tooth.svg');
+}
+
+.heroicon-information-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/information-circle.svg');
+}
+
+.heroicon-exclamation-triangle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/exclamation-triangle.svg');
+}
+
+.heroicon-check-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/check-circle.svg');
+}
+
+.heroicon-x-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/solid/x-circle.svg');
+}
+
+/* Outline variants - Override default solid icons when .heroicon-outline is present */
+.heroicon-outline.heroicon-user {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/user.svg');
+}
+
+.heroicon-outline.heroicon-home {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/home.svg');
+}
+
+.heroicon-outline.heroicon-menu {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/bars-3.svg');
+}
+
+.heroicon-outline.heroicon-x-mark {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/x-mark.svg');
+}
+
+.heroicon-outline.heroicon-chevron-down {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/chevron-down.svg');
+}
+
+.heroicon-outline.heroicon-chevron-up {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/chevron-up.svg');
+}
+
+.heroicon-outline.heroicon-chevron-left {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/chevron-left.svg');
+}
+
+.heroicon-outline.heroicon-chevron-right {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/chevron-right.svg');
+}
+
+.heroicon-outline.heroicon-plus {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/plus.svg');
+}
+
+.heroicon-outline.heroicon-minus {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/minus.svg');
+}
+
+.heroicon-outline.heroicon-pencil {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/pencil.svg');
+}
+
+.heroicon-outline.heroicon-trash {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/trash.svg');
+}
+
+.heroicon-outline.heroicon-check {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/check.svg');
+}
+
+.heroicon-outline.heroicon-heart {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/heart.svg');
+}
+
+.heroicon-outline.heroicon-star {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/star.svg');
+}
+
+.heroicon-outline.heroicon-bell {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/bell.svg');
+}
+
+.heroicon-outline.heroicon-envelope {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/envelope.svg');
+}
+
+.heroicon-outline.heroicon-phone {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/phone.svg');
+}
+
+.heroicon-outline.heroicon-magnifying-glass {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/magnifying-glass.svg');
+}
+
+.heroicon-outline.heroicon-cog-6-tooth {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/cog-6-tooth.svg');
+}
+
+.heroicon-outline.heroicon-information-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/information-circle.svg');
+}
+
+.heroicon-outline.heroicon-exclamation-triangle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/exclamation-triangle.svg');
+}
+
+.heroicon-outline.heroicon-check-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/check-circle.svg');
+}
+
+.heroicon-outline.heroicon-x-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/24/outline/x-circle.svg');
+}
+
+/* 16px Mini icons - Override with 16px solid versions */
+.heroicon-16.heroicon-user {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/user.svg');
+}
+
+.heroicon-16.heroicon-home {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/home.svg');
+}
+
+.heroicon-16.heroicon-menu {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/bars-3.svg');
+}
+
+.heroicon-16.heroicon-x-mark {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/x-mark.svg');
+}
+
+.heroicon-16.heroicon-chevron-down {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/chevron-down.svg');
+}
+
+.heroicon-16.heroicon-chevron-up {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/chevron-up.svg');
+}
+
+.heroicon-16.heroicon-chevron-left {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/chevron-left.svg');
+}
+
+.heroicon-16.heroicon-chevron-right {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/chevron-right.svg');
+}
+
+.heroicon-16.heroicon-plus {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/plus.svg');
+}
+
+.heroicon-16.heroicon-minus {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/minus.svg');
+}
+
+.heroicon-16.heroicon-check {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/check.svg');
+}
+
+.heroicon-16.heroicon-bell {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/bell.svg');
+}
+
+.heroicon-16.heroicon-envelope {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/envelope.svg');
+}
+
+.heroicon-16.heroicon-magnifying-glass {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/magnifying-glass.svg');
+}
+
+.heroicon-16.heroicon-cog-6-tooth {
+  background-image: url('/velum2/src/img/icons/hero-icons/16/solid/cog-6-tooth.svg');
+}
+
+/* 20px icons - Override with 20px solid versions */
+.heroicon-20.heroicon-user {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/user.svg');
+}
+
+.heroicon-20.heroicon-home {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/home.svg');
+}
+
+.heroicon-20.heroicon-menu {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/bars-3.svg');
+}
+
+.heroicon-20.heroicon-x-mark {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/x-mark.svg');
+}
+
+.heroicon-20.heroicon-chevron-down {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/chevron-down.svg');
+}
+
+.heroicon-20.heroicon-chevron-up {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/chevron-up.svg');
+}
+
+.heroicon-20.heroicon-chevron-left {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/chevron-left.svg');
+}
+
+.heroicon-20.heroicon-chevron-right {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/chevron-right.svg');
+}
+
+.heroicon-20.heroicon-plus {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/plus.svg');
+}
+
+.heroicon-20.heroicon-minus {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/minus.svg');
+}
+
+.heroicon-20.heroicon-pencil {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/pencil.svg');
+}
+
+.heroicon-20.heroicon-trash {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/trash.svg');
+}
+
+.heroicon-20.heroicon-check {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/check.svg');
+}
+
+.heroicon-20.heroicon-heart {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/heart.svg');
+}
+
+.heroicon-20.heroicon-star {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/star.svg');
+}
+
+.heroicon-20.heroicon-bell {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/bell.svg');
+}
+
+.heroicon-20.heroicon-envelope {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/envelope.svg');
+}
+
+.heroicon-20.heroicon-phone {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/phone.svg');
+}
+
+.heroicon-20.heroicon-magnifying-glass {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/magnifying-glass.svg');
+}
+
+.heroicon-20.heroicon-cog-6-tooth {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/cog-6-tooth.svg');
+}
+
+.heroicon-20.heroicon-information-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/information-circle.svg');
+}
+
+.heroicon-20.heroicon-exclamation-triangle {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/exclamation-triangle.svg');
+}
+
+.heroicon-20.heroicon-check-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/check-circle.svg');
+}
+
+.heroicon-20.heroicon-x-circle {
+  background-image: url('/velum2/src/img/icons/hero-icons/20/solid/x-circle.svg');
+}
