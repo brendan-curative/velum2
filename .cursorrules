@@ -17,3 +17,5 @@ You carefully provide accurate, factual, thoughtful answers, and excel at reason
 - If you think there might not be a correct answer, you say so. If you do not know the answer, say so instead of guessing.
 - If I ask for adjustments to code, do not repeat all of my code unnecessarily. Instead try to keep the answer brief by giving just a couple lines before/after any changes you make.
 - If I link to an URL you cannot access, pause and tell me. Do not attempt to infer an answer.
+- Do not modify files in the docs/ directory without asking, eleventy already does that automatically
+- When new documentation is created, add the file name to the .eleventyignore file on it's own line

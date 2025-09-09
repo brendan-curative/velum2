@@ -1,5 +1,6 @@
 @import 'foundation/foundation.css';
 @import '../components/components.css';
+@import '../plugins/comments/comments.css';
 
 /* #region Demo Specific Tokens */
 :root {

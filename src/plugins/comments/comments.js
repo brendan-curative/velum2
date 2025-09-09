@@ -11,7 +11,7 @@ class VelumComments {
       label: config.label || 'comments',
       theme: config.theme || 'github-light',
       crossorigin: config.crossorigin || 'anonymous',
-      templatesPath: config.templatesPath || 'src/components/comments/',
+      templatesPath: config.templatesPath || 'src/plugins/comments/',
       ...config
     };
     

@@ -53,7 +53,7 @@ Update the `data-repo` attribute in your `_includes/layout.html` file:
 
 ```html
 <!-- Velum Comments System -->
-<script src="{{ '/' | url }}src/js/comments.js"></script>
+<script src="{{ '/' | url }}src/plugins/comments/comments.js"></script>
 <script 
   data-repo="your-username/your-repo-name"
   data-issue-term="pathname"
@@ -146,11 +146,11 @@ For different repository types, users need different token scopes:
 
 ### Styling
 
-The comments widget uses your existing Velum CSS variables and can be customized by modifying `/src/css/components/comments/comments.css`.
+The comments widget uses your existing Velum CSS variables and can be customized by modifying `/src/plugins/comments/comments.css`.
 
 ### JavaScript
 
-The core functionality is in `/src/js/comments.js`. You can extend it to add features like:
+The core functionality is in `/src/plugins/comments/comments.js`. You can extend it to add features like:
 - Reactions/emoji support
 - Comment editing
 - Real-time updates
@@ -162,7 +162,7 @@ The core functionality is in `/src/js/comments.js`. You can extend it to add fea
 - Check that your repository name in `data-repo` is correct
 - Ensure the repository exists and user has access to it
 - Check browser console for API errors
-- Verify Eleventy is serving static assets correctly (`/src/js/comments.js` should be accessible)
+- Verify Eleventy is serving static assets correctly (`/src/plugins/comments/comments.js` should be accessible)
 
 ### Authentication issues
 - Verify users have the correct token scopes (`repo` for private, `public_repo` for public)
@@ -175,7 +175,7 @@ The core functionality is in `/src/js/comments.js`. You can extend it to add fea
 - Check that the comments container `<div id="comments">` exists in your layout
 
 ### Eleventy-specific issues
-- Ensure `.eleventy.js` configuration includes passthrough copy for `src/js` and `src/css`
+- Ensure `.eleventy.js` configuration includes passthrough copy for `src` (includes plugins and css)
 - Check that the git commit date plugin is installed: `npm install eleventy-plugin-git-commit-date`
 - Verify the layout is being applied correctly to your pages
 
@@ -227,7 +227,7 @@ If you're migrating from utterances:
 </script>
 
 <!-- NEW: Velum Comments -->
-<script src="{{ '/' | url }}src/js/comments.js"></script>
+<script src="{{ '/' | url }}src/plugins/comments/comments.js"></script>
 <script 
   data-repo="owner/repo"
   data-issue-term="pathname"
