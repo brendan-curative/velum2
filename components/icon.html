@@ -16,8 +16,8 @@ secondary: Heroicons displayed as CSS background images
 <p>Icon component provides easy access to Heroicons using CSS background images. Icons are displayed as scalable background images with consistent sizing and positioning.</p>
 
 <h3>Default Icons (24px Solid)</h3>
-<div style="margin-bottom: 32px;">
-  <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+<div class="mb-32">
+  <div class="flex gap-16 flex-items-center flex-wrap">
     <span class="heroicon heroicon-user" aria-label="User icon"></span>
     <span class="heroicon heroicon-home" aria-label="Home icon"></span>
     <span class="heroicon heroicon-menu" aria-label="Menu icon"></span>
@@ -40,8 +40,8 @@ secondary: Heroicons displayed as CSS background images
 </div>
 
 <h3>Outline Icons (24px)</h3>
-<div style="margin-bottom: 32px;">
-  <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+<div class="mb-32">
+  <div class="flex gap-16 flex-items-center flex-wrap">
     <span class="heroicon heroicon-outline heroicon-user" aria-label="User icon outline"></span>
     <span class="heroicon heroicon-outline heroicon-home" aria-label="Home icon outline"></span>
     <span class="heroicon heroicon-outline heroicon-menu" aria-label="Menu icon outline"></span>
@@ -64,19 +64,19 @@ secondary: Heroicons displayed as CSS background images
 </div>
 
 <h3>Status Icons</h3>
-<div style="margin-bottom: 32px;">
-  <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-    <span class="heroicon heroicon-check-circle" aria-label="Success icon" style="color: var(--color-text-success);"></span>
-    <span class="heroicon heroicon-x-circle" aria-label="Error icon" style="color: var(--color-text-critical);"></span>
-    <span class="heroicon heroicon-exclamation-triangle" aria-label="Warning icon" style="color: var(--color-text-warning);"></span>
-    <span class="heroicon heroicon-information-circle" aria-label="Info icon" style="color: var(--color-text-highlight-default);"></span>
+<div class="mb-32">
+  <div class="flex gap-16 flex-items-center flex-wrap">
+    <span class="heroicon heroicon-check-circle text-success" aria-label="Success icon"></span>
+    <span class="heroicon heroicon-x-circle text-critical" aria-label="Error icon"></span>
+    <span class="heroicon heroicon-exclamation-triangle text-warning" aria-label="Warning icon"></span>
+    <span class="heroicon heroicon-information-circle text-highlight" aria-label="Info icon"></span>
   </div>
 </div>
 
 <h3>Size Variations</h3>
-<div style="margin-bottom: 32px;">
+<div class="mb-32">
   <h4>16px Mini Icons</h4>
-  <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
+  <div class="flex gap-16 flex-items-center flex-wrap mb-16">
     <span class="heroicon heroicon-16 heroicon-user" aria-label="User icon 16px"></span>
     <span class="heroicon heroicon-16 heroicon-home" aria-label="Home icon 16px"></span>
     <span class="heroicon heroicon-16 heroicon-menu" aria-label="Menu icon 16px"></span>
@@ -88,7 +88,7 @@ secondary: Heroicons displayed as CSS background images
   </div>
 
   <h4>20px Icons</h4>
-  <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
+  <div class="flex gap-16 flex-items-center flex-wrap mb-16">
     <span class="heroicon heroicon-20 heroicon-user" aria-label="User icon 20px"></span>
     <span class="heroicon heroicon-20 heroicon-home" aria-label="Home icon 20px"></span>
     <span class="heroicon heroicon-20 heroicon-menu" aria-label="Menu icon 20px"></span>
@@ -100,7 +100,7 @@ secondary: Heroicons displayed as CSS background images
   </div>
 
   <h4>24px Icons (Default)</h4>
-  <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+  <div class="flex gap-16 flex-items-center flex-wrap">
     <span class="heroicon heroicon-user" aria-label="User icon 24px"></span>
     <span class="heroicon heroicon-home" aria-label="Home icon 24px"></span>
     <span class="heroicon heroicon-menu" aria-label="Menu icon 24px"></span>
@@ -113,7 +113,7 @@ secondary: Heroicons displayed as CSS background images
 </div>
 
 <h3>Usage Examples</h3>
-<div style="margin-bottom: 32px;">
+<div class="mb-32">
   <h4>Basic Icon</h4>
   <div class="code">
 &lt;span class="heroicon heroicon-user"&gt;&lt;/span&gt;
@@ -141,7 +141,7 @@ secondary: Heroicons displayed as CSS background images
 </div>
 
 <h3>Available Icon Classes</h3>
-<div style="margin-bottom: 32px;">
+<div class="mb-32">
   <h4>Base Classes</h4>
   <ul>
     <li><code>.heroicon</code> - Base class (24px, solid style)</li>
@@ -181,373 +181,373 @@ secondary: Heroicons displayed as CSS background images
 <p>Complete collection of icons available in the icon component, organized by size.</p>
 
 <h4>24px Solid Icons (Default)</h4>
-<div style="margin-bottom: 24px; padding: 16px; border: 1px solid var(--color-border-default); border-radius: 8px;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; align-items: center;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+<div class="mb-24 p-16 icon-container">
+  <div class="icon-grid">
+    <div class="icon-item">
       <span class="heroicon heroicon-user" aria-label="User"></span>
-      <code style="font-size: 12px;">user</code>
+      <code class="code-small">user</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-home" aria-label="Home"></span>
-      <code style="font-size: 12px;">home</code>
+      <code class="code-small">home</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-menu" aria-label="Menu"></span>
-      <code style="font-size: 12px;">menu</code>
+      <code class="code-small">menu</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-x-mark" aria-label="X Mark"></span>
-      <code style="font-size: 12px;">x-mark</code>
+      <code class="code-small">x-mark</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-chevron-down" aria-label="Chevron Down"></span>
-      <code style="font-size: 12px;">chevron-down</code>
+      <code class="code-small">chevron-down</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-chevron-up" aria-label="Chevron Up"></span>
-      <code style="font-size: 12px;">chevron-up</code>
+      <code class="code-small">chevron-up</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-chevron-left" aria-label="Chevron Left"></span>
-      <code style="font-size: 12px;">chevron-left</code>
+      <code class="code-small">chevron-left</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-chevron-right" aria-label="Chevron Right"></span>
-      <code style="font-size: 12px;">chevron-right</code>
+      <code class="code-small">chevron-right</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-plus" aria-label="Plus"></span>
-      <code style="font-size: 12px;">plus</code>
+      <code class="code-small">plus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-minus" aria-label="Minus"></span>
-      <code style="font-size: 12px;">minus</code>
+      <code class="code-small">minus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-pencil" aria-label="Pencil"></span>
-      <code style="font-size: 12px;">pencil</code>
+      <code class="code-small">pencil</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-trash" aria-label="Trash"></span>
-      <code style="font-size: 12px;">trash</code>
+      <code class="code-small">trash</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-check" aria-label="Check"></span>
-      <code style="font-size: 12px;">check</code>
+      <code class="code-small">check</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-heart" aria-label="Heart"></span>
-      <code style="font-size: 12px;">heart</code>
+      <code class="code-small">heart</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-star" aria-label="Star"></span>
-      <code style="font-size: 12px;">star</code>
+      <code class="code-small">star</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-bell" aria-label="Bell"></span>
-      <code style="font-size: 12px;">bell</code>
+      <code class="code-small">bell</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-envelope" aria-label="Envelope"></span>
-      <code style="font-size: 12px;">envelope</code>
+      <code class="code-small">envelope</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-phone" aria-label="Phone"></span>
-      <code style="font-size: 12px;">phone</code>
+      <code class="code-small">phone</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-magnifying-glass" aria-label="Magnifying Glass"></span>
-      <code style="font-size: 12px;">magnifying-glass</code>
+      <code class="code-small">magnifying-glass</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-cog-6-tooth" aria-label="Cog 6 Tooth"></span>
-      <code style="font-size: 12px;">cog-6-tooth</code>
+      <code class="code-small">cog-6-tooth</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-information-circle" aria-label="Information Circle"></span>
-      <code style="font-size: 12px;">information-circle</code>
+      <code class="code-small">information-circle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-exclamation-triangle" aria-label="Exclamation Triangle"></span>
-      <code style="font-size: 12px;">exclamation-triangle</code>
+      <code class="code-small">exclamation-triangle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-check-circle" aria-label="Check Circle"></span>
-      <code style="font-size: 12px;">check-circle</code>
+      <code class="code-small">check-circle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-x-circle" aria-label="X Circle"></span>
-      <code style="font-size: 12px;">x-circle</code>
+      <code class="code-small">x-circle</code>
     </div>
   </div>
 </div>
 
 <h4>24px Outline Icons</h4>
-<div style="margin-bottom: 24px; padding: 16px; border: 1px solid var(--color-border-default); border-radius: 8px;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; align-items: center;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+<div class="mb-24 p-16 icon-container">
+  <div class="icon-grid">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-user" aria-label="User Outline"></span>
-      <code style="font-size: 12px;">user</code>
+      <code class="code-small">user</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-home" aria-label="Home Outline"></span>
-      <code style="font-size: 12px;">home</code>
+      <code class="code-small">home</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-menu" aria-label="Menu Outline"></span>
-      <code style="font-size: 12px;">menu</code>
+      <code class="code-small">menu</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-x-mark" aria-label="X Mark Outline"></span>
-      <code style="font-size: 12px;">x-mark</code>
+      <code class="code-small">x-mark</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-chevron-down" aria-label="Chevron Down Outline"></span>
-      <code style="font-size: 12px;">chevron-down</code>
+      <code class="code-small">chevron-down</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-chevron-up" aria-label="Chevron Up Outline"></span>
-      <code style="font-size: 12px;">chevron-up</code>
+      <code class="code-small">chevron-up</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-chevron-left" aria-label="Chevron Left Outline"></span>
-      <code style="font-size: 12px;">chevron-left</code>
+      <code class="code-small">chevron-left</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-chevron-right" aria-label="Chevron Right Outline"></span>
-      <code style="font-size: 12px;">chevron-right</code>
+      <code class="code-small">chevron-right</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-plus" aria-label="Plus Outline"></span>
-      <code style="font-size: 12px;">plus</code>
+      <code class="code-small">plus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-minus" aria-label="Minus Outline"></span>
-      <code style="font-size: 12px;">minus</code>
+      <code class="code-small">minus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-pencil" aria-label="Pencil Outline"></span>
-      <code style="font-size: 12px;">pencil</code>
+      <code class="code-small">pencil</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-trash" aria-label="Trash Outline"></span>
-      <code style="font-size: 12px;">trash</code>
+      <code class="code-small">trash</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-check" aria-label="Check Outline"></span>
-      <code style="font-size: 12px;">check</code>
+      <code class="code-small">check</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-heart" aria-label="Heart Outline"></span>
-      <code style="font-size: 12px;">heart</code>
+      <code class="code-small">heart</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-star" aria-label="Star Outline"></span>
-      <code style="font-size: 12px;">star</code>
+      <code class="code-small">star</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-bell" aria-label="Bell Outline"></span>
-      <code style="font-size: 12px;">bell</code>
+      <code class="code-small">bell</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-envelope" aria-label="Envelope Outline"></span>
-      <code style="font-size: 12px;">envelope</code>
+      <code class="code-small">envelope</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-phone" aria-label="Phone Outline"></span>
-      <code style="font-size: 12px;">phone</code>
+      <code class="code-small">phone</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-magnifying-glass" aria-label="Magnifying Glass Outline"></span>
-      <code style="font-size: 12px;">magnifying-glass</code>
+      <code class="code-small">magnifying-glass</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-cog-6-tooth" aria-label="Cog 6 Tooth Outline"></span>
-      <code style="font-size: 12px;">cog-6-tooth</code>
+      <code class="code-small">cog-6-tooth</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-information-circle" aria-label="Information Circle Outline"></span>
-      <code style="font-size: 12px;">information-circle</code>
+      <code class="code-small">information-circle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-exclamation-triangle" aria-label="Exclamation Triangle Outline"></span>
-      <code style="font-size: 12px;">exclamation-triangle</code>
+      <code class="code-small">exclamation-triangle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-check-circle" aria-label="Check Circle Outline"></span>
-      <code style="font-size: 12px;">check-circle</code>
+      <code class="code-small">check-circle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-outline heroicon-x-circle" aria-label="X Circle Outline"></span>
-      <code style="font-size: 12px;">x-circle</code>
+      <code class="code-small">x-circle</code>
     </div>
   </div>
 </div>
 
 <h4>20px Solid Icons</h4>
-<div style="margin-bottom: 24px; padding: 16px; border: 1px solid var(--color-border-default); border-radius: 8px;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; align-items: center;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+<div class="mb-24 p-16 icon-container">
+  <div class="icon-grid">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-user" aria-label="User 20px"></span>
-      <code style="font-size: 12px;">user</code>
+      <code class="code-small">user</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-home" aria-label="Home 20px"></span>
-      <code style="font-size: 12px;">home</code>
+      <code class="code-small">home</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-menu" aria-label="Menu 20px"></span>
-      <code style="font-size: 12px;">menu</code>
+      <code class="code-small">menu</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-x-mark" aria-label="X Mark 20px"></span>
-      <code style="font-size: 12px;">x-mark</code>
+      <code class="code-small">x-mark</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-chevron-down" aria-label="Chevron Down 20px"></span>
-      <code style="font-size: 12px;">chevron-down</code>
+      <code class="code-small">chevron-down</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-chevron-up" aria-label="Chevron Up 20px"></span>
-      <code style="font-size: 12px;">chevron-up</code>
+      <code class="code-small">chevron-up</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-chevron-left" aria-label="Chevron Left 20px"></span>
-      <code style="font-size: 12px;">chevron-left</code>
+      <code class="code-small">chevron-left</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-chevron-right" aria-label="Chevron Right 20px"></span>
-      <code style="font-size: 12px;">chevron-right</code>
+      <code class="code-small">chevron-right</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-plus" aria-label="Plus 20px"></span>
-      <code style="font-size: 12px;">plus</code>
+      <code class="code-small">plus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-minus" aria-label="Minus 20px"></span>
-      <code style="font-size: 12px;">minus</code>
+      <code class="code-small">minus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-pencil" aria-label="Pencil 20px"></span>
-      <code style="font-size: 12px;">pencil</code>
+      <code class="code-small">pencil</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-trash" aria-label="Trash 20px"></span>
-      <code style="font-size: 12px;">trash</code>
+      <code class="code-small">trash</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-check" aria-label="Check 20px"></span>
-      <code style="font-size: 12px;">check</code>
+      <code class="code-small">check</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-heart" aria-label="Heart 20px"></span>
-      <code style="font-size: 12px;">heart</code>
+      <code class="code-small">heart</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-star" aria-label="Star 20px"></span>
-      <code style="font-size: 12px;">star</code>
+      <code class="code-small">star</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-bell" aria-label="Bell 20px"></span>
-      <code style="font-size: 12px;">bell</code>
+      <code class="code-small">bell</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-envelope" aria-label="Envelope 20px"></span>
-      <code style="font-size: 12px;">envelope</code>
+      <code class="code-small">envelope</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-phone" aria-label="Phone 20px"></span>
-      <code style="font-size: 12px;">phone</code>
+      <code class="code-small">phone</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-magnifying-glass" aria-label="Magnifying Glass 20px"></span>
-      <code style="font-size: 12px;">magnifying-glass</code>
+      <code class="code-small">magnifying-glass</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-cog-6-tooth" aria-label="Cog 6 Tooth 20px"></span>
-      <code style="font-size: 12px;">cog-6-tooth</code>
+      <code class="code-small">cog-6-tooth</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-information-circle" aria-label="Information Circle 20px"></span>
-      <code style="font-size: 12px;">information-circle</code>
+      <code class="code-small">information-circle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-exclamation-triangle" aria-label="Exclamation Triangle 20px"></span>
-      <code style="font-size: 12px;">exclamation-triangle</code>
+      <code class="code-small">exclamation-triangle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-check-circle" aria-label="Check Circle 20px"></span>
-      <code style="font-size: 12px;">check-circle</code>
+      <code class="code-small">check-circle</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-20 heroicon-x-circle" aria-label="X Circle 20px"></span>
-      <code style="font-size: 12px;">x-circle</code>
+      <code class="code-small">x-circle</code>
     </div>
   </div>
 </div>
 
 <h4>16px Mini Icons</h4>
-<div style="margin-bottom: 32px; padding: 16px; border: 1px solid var(--color-border-default); border-radius: 8px;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; align-items: center;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+<div class="mb-32 p-16 icon-container">
+  <div class="icon-grid">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-user" aria-label="User 16px"></span>
-      <code style="font-size: 12px;">user</code>
+      <code class="code-small">user</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-home" aria-label="Home 16px"></span>
-      <code style="font-size: 12px;">home</code>
+      <code class="code-small">home</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-menu" aria-label="Menu 16px"></span>
-      <code style="font-size: 12px;">menu</code>
+      <code class="code-small">menu</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-x-mark" aria-label="X Mark 16px"></span>
-      <code style="font-size: 12px;">x-mark</code>
+      <code class="code-small">x-mark</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-chevron-down" aria-label="Chevron Down 16px"></span>
-      <code style="font-size: 12px;">chevron-down</code>
+      <code class="code-small">chevron-down</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-chevron-up" aria-label="Chevron Up 16px"></span>
-      <code style="font-size: 12px;">chevron-up</code>
+      <code class="code-small">chevron-up</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-chevron-left" aria-label="Chevron Left 16px"></span>
-      <code style="font-size: 12px;">chevron-left</code>
+      <code class="code-small">chevron-left</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-chevron-right" aria-label="Chevron Right 16px"></span>
-      <code style="font-size: 12px;">chevron-right</code>
+      <code class="code-small">chevron-right</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-plus" aria-label="Plus 16px"></span>
-      <code style="font-size: 12px;">plus</code>
+      <code class="code-small">plus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-minus" aria-label="Minus 16px"></span>
-      <code style="font-size: 12px;">minus</code>
+      <code class="code-small">minus</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-check" aria-label="Check 16px"></span>
-      <code style="font-size: 12px;">check</code>
+      <code class="code-small">check</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-bell" aria-label="Bell 16px"></span>
-      <code style="font-size: 12px;">bell</code>
+      <code class="code-small">bell</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-envelope" aria-label="Envelope 16px"></span>
-      <code style="font-size: 12px;">envelope</code>
+      <code class="code-small">envelope</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-magnifying-glass" aria-label="Magnifying Glass 16px"></span>
-      <code style="font-size: 12px;">magnifying-glass</code>
+      <code class="code-small">magnifying-glass</code>
     </div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+    <div class="icon-item">
       <span class="heroicon heroicon-16 heroicon-cog-6-tooth" aria-label="Cog 6 Tooth 16px"></span>
-      <code style="font-size: 12px;">cog-6-tooth</code>
+      <code class="code-small">cog-6-tooth</code>
     </div>
   </div>
 </div>

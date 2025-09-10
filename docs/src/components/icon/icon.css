@@ -1,5 +1,29 @@
 /* Icon Component - Heroicons Integration */
 
+/* Helper classes for icon displays */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-16);
+  align-items: center;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.icon-container {
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--spacing-8);
+}
+
+.code-small {
+  font-size: 12px;
+}
+
 /* Base heroicon class - 24px solid icons by default */
 .heroicon {
   display: inline-block;
