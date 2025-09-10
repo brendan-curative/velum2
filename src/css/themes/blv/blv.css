@@ -1,0 +1,46 @@
+/* #region Defaults */
+html[data-theme="blv"] body {
+    background-image: url(img/waves.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-shadow: 0 1px 0 var(--color-white);
+}
+/* #endregion */
+
+/* #region Sidebar */
+html[data-theme="blv"] nav {
+    background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 2px 16px 0 rgba(102, 114, 125, 0.25), 0 4px 200px 0 rgba(255, 255, 255, 0.01) inset;
+        backdrop-filter: blur(5px);
+}
+
+aside nav div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+    html[data-theme="blv"] nav a:not(.logo),
+    html[data-theme="blv"] nav a:not(.logo):visited {
+        background: transparent;
+    }
+
+    html[data-theme="blv"] nav a:not(.logo):hover,
+    html[data-theme="blv"] nav a:not(.logo):focus {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+/* #endregion */
+
+/* #region Dashboard */
+html[data-theme="blv"] article {
+    background: transparent;
+}
+
+    html[data-theme="blv"] .dashboard > div {
+        border-color: transparent;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 2px 16px 0 rgba(102, 114, 125, 0.25), 0 4px 200px 0 rgba(255, 255, 255, 0.01) inset;
+        backdrop-filter: blur(5px);
+    }
+/* #endregion */

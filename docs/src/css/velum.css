@@ -1,6 +1,7 @@
 @import 'foundation/foundation.css';
 @import '../components/components.css';
 @import '../plugins/comments/comments.css';
+@import 'themes/blv/blv.css';
 
 /* #region Demo Specific Tokens */
 :root {
