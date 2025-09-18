@@ -10,7 +10,7 @@ html[data-theme="blv"] body {
 
 /* #region Sidebar */
 html[data-theme="blv"] nav {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 2px 16px 0 rgba(102, 114, 125, 0.25), 0 4px 200px 0 rgba(255, 255, 255, 0.01) inset;
         backdrop-filter: blur(5px);
 }
@@ -27,6 +27,7 @@ aside nav div {
     html[data-theme="blv"] nav a:not(.logo):hover,
     html[data-theme="blv"] nav a:not(.logo):focus {
         background: rgba(255, 255, 255, 0.25);
+        color: var(--color-blue-900);
     }
 
 /* #endregion */
@@ -39,8 +40,18 @@ html[data-theme="blv"] article {
     html[data-theme="blv"] .dashboard > div {
         border-color: transparent;
         border-radius: 4px;
-        background: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.5);
         box-shadow: 0 2px 16px 0 rgba(102, 114, 125, 0.25), 0 4px 200px 0 rgba(255, 255, 255, 0.01) inset;
         backdrop-filter: blur(5px);
+        border: none
+    }
+
+    html[data-theme="blv"] svg.cutout {
+        fill: rgba(0, 178, 255, 0.5);
+      
+    }
+
+    html[data-theme="blv"] .dashboard .cashcard div {
+        border-radius: 4px;
     }
 /* #endregion */
